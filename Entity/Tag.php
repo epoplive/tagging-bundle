@@ -22,30 +22,6 @@ class Tag extends BaseTag
     protected $id;
 
     /**
-     * @var string
-	 * @ORM\Column(name="name", type="string", length=50)
-     */
-    protected $name;
-
-    /**
-     * @var string
-	 * @ORM\Column(name="slug", type="string", length=50)
-     */
-    protected $slug;
-
-    /**
-     * @var \DateTime
-     * @ORM\Column(name="created_at", type="datetime")
-     */
-    protected $createdAt;
-
-    /**
-     * @var \DateTime
-     * @ORM\Column(name="updated_at", type="datetime")
-     */
-    protected $updatedAt;
-
-    /**
      * @ORM\OneToMany(targetEntity="Fogs\TaggingBundle\Entity\Tagging", mappedBy="tag", fetch="EAGER")
      **/
     protected $tagging;
