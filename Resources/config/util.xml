@@ -5,11 +5,11 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="fpn_tag.slugifier.class">Evilpope\TaggingBundle\Util\Slugifier</parameter>
+        <parameter key="evilpope_tagging.slugifier.class">Evilpope\TaggingBundle\Util\Slugifier</parameter>
     </parameters>
 
     <services>
-        <service id="fpn_tag.slugifier.default" class="%fpn_tag.slugifier.class%" public="true">
+        <service id="evilpope_tagging.slugifier.default" class="%evilpope_tagging.slugifier.class%" public="true">
         </service>
     </services>
 

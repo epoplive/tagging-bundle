@@ -4,7 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <mapped-superclass name="Evilpope\TaggingBundle\Entity\Tag" table="fpn_tag_tag">
+    <mapped-superclass name="Evilpope\TaggingBundle\Entity\Tag" table="evilpope_tag_tag">
 
         <field name="name"          column="name"           type="string"   length="50"     unique="true" />
         <field name="slug"          column="slug"           type="string"   length="50"     unique="true" />
