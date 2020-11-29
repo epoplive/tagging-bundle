@@ -1,6 +1,6 @@
 <?php
 
-namespace Fogs\TaggingBundle\Form;
+namespace Evilpope\TaggingBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

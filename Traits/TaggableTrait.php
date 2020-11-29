@@ -1,10 +1,10 @@
 <?php
 
-namespace Fogs\TaggingBundle\Traits;
+namespace Evilpope\TaggingBundle\Traits;
 
 use DoctrineExtensions\Taggable\Taggable;
 use Doctrine\Common\Collections\ArrayCollection;
-use Fogs\TaggingBundle\Service\TagManager;
+use Evilpope\TaggingBundle\Service\TagManager;
 
 trait TaggableTrait
 {

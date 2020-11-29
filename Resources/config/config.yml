@@ -1,5 +1,5 @@
-# FPN Tag Configuration
-fpn_tag:
+# evilpope Tag Configuration
+evilpope_tag:
     model:
-        tag_class:     Fogs\TaggingBundle\Entity\Tag
-        tagging_class: Fogs\TaggingBundle\Entity\Tagging
+        tag_class:     evilpope\TaggingBundle\Entity\Tag
+        tagging_class: evilpope\TaggingBundle\Entity\Tagging

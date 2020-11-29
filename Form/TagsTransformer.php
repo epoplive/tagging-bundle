@@ -1,8 +1,8 @@
 <?php
 
-namespace Fogs\TaggingBundle\Form;
+namespace Evilpope\TaggingBundle\Form;
 
-use FPN\TagBundle\Entity\TagManager;
+use Evilpope\TaggingBundle\Entity\TagManager;
 
 use Symfony\Component\Form\DataTransformerInterface;
 

@@ -1,21 +1,22 @@
 {
     "name": "epoplive/tagging-bundle",
-    "description": "Tag any entity in your Symfony2 project.",
-    "homepage": "http://github.com/fogs/tagging-bundle",
+    "description": "Tag any entity in your Symfony 3/4/5 project.",
+    "homepage": "http://github.com/epoplive/tagging-bundle",
     "license": "MIT",
     "type": "library",
     "autoload": {
         "psr-0": {
-            "Fogs\\TaggingBundle": ""
+            "Evilpope\\TaggingBundle": ""
         }
     },
     "require": {
-        "php": ">=5.4",
-        "fpn/tag-bundle": "@dev"
+        "php": ">=7.4",
+        "symfony/framework-bundle": ">=2.0",
+        "fpn/doctrine-extensions-taggable": "v0.9.0"
     },
     "config": {
         "bin-dir": "bin"
     },
-    "target-dir": "Fogs/TaggingBundle",
+    "target-dir": "Evilpope/TaggingBundle",
     "minimum-stability": "dev"
 }
