@@ -1,9 +1,9 @@
 <?php
 
-namespace Fogs\TaggingBundle\Service;
+namespace Evilpope\TaggingBundle\Service;
 
 use DoctrineExtensions\Taggable\Taggable;
-use FPN\TagBundle\Entity\TagManager as BaseTagManager;
+use Evilpope\TaggingBundle\Entity\TagManager as BaseTagManager;
 use Doctrine\ORM\Query;
 
 class TagManager extends BaseTagManager

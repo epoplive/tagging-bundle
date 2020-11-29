@@ -1,6 +1,6 @@
 <?php
 
-namespace Fogs\TaggingBundle\DependencyInjection;
+namespace Evilpope\TaggingBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class FogsTaggingExtension extends Extension
+class EvilpopeTaggingExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -28,7 +28,16 @@ class FogsTaggingExtension extends Extension
         // adding this to the config of this bundle did not work..
         $container->setParameter('twig.form.resources', array_merge(
                 $container->getParameter('twig.form.resources'),
-                array('@FogsTagging/Form/widgets.html.twig')
+                array('@EvilpopeTagging/Form/widgets.html.twig')
         ));
+
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('orm.xml');
+        $loader->load('util.xml');
+
+        $container->setParameter('evilpope_tag.entity.tag.class', $config['model']['tag_class']);
+        $container->setParameter('evilpope_tag.entity.tagging.class', $config['model']['tagging_class']);
+
+        $container->setAlias('evilpope_tag.slugifier', $config['service']['slugifier']);
     }
 }

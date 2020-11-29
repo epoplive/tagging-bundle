@@ -1,8 +1,8 @@
 <?php
 
-namespace Fogs\TaggingBundle\Entity;
+namespace Evilpope\TaggingBundle\Entity;
 
-use \FPN\TagBundle\Entity\Tag as BaseTag;
+use DoctrineExtensions\Taggable\Entity\Tag as BaseTag;
 use Doctrine\ORM\Mapping as ORM;
 
 
@@ -22,7 +22,34 @@ class Tag extends BaseTag
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Fogs\TaggingBundle\Entity\Tagging", mappedBy="tag", fetch="EAGER")
+     * @ORM\OneToMany(targetEntity="Evilpope\TaggingBundle\Entity\Tagging", mappedBy="tag", fetch="EAGER")
      **/
     protected $tagging;
+
+    protected $slug;
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
+    /**
+     * Returns tag slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Sets tag slug
+     *
+     * @return string
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
 }

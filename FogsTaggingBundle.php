@@ -1,9 +1,9 @@
 <?php
 
-namespace Fogs\TaggingBundle;
+namespace Evilpope\TaggingBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class FogsTaggingBundle extends Bundle
+class EvilpopeTaggingBundle extends Bundle
 {
 }

@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Fogs\TaggingBundle\Interfaces;
+namespace Evilpope\TaggingBundle\Interfaces;
 
 use DoctrineExtensions\Taggable\Taggable as BaseTaggable;
-use Fogs\TaggingBundle\Service\TagManager;
+use Evilpope\TaggingBundle\Service\TagManager;
 
 interface Taggable extends BaseTaggable
 {

@@ -709,12 +709,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fogs/tagmanager.git",
+                "url": "https://github.com/evilpope/tagmanager.git",
                 "reference": "46a0fb52e54a2b4f6d33c5375198da57f044dd79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fogs/tagmanager/zipball/46a0fb52e54a2b4f6d33c5375198da57f044dd79",
+                "url": "https://api.github.com/repos/evilpope/tagmanager/zipball/46a0fb52e54a2b4f6d33c5375198da57f044dd79",
                 "reference": "46a0fb52e54a2b4f6d33c5375198da57f044dd79",
                 "shasum": ""
             },

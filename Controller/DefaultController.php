@@ -1,6 +1,6 @@
 <?php
 
-namespace Fogs\TaggingBundle\Controller;
+namespace Evilpope\TaggingBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -24,7 +24,7 @@ class DefaultController extends Controller
 
     public function searchAction($query)
     {
-        $tags = $this->get('fpn_tag.tag_manager')->findTags($query);
+        $tags = $this->get('evilpope_tag.tag_manager')->findTags($query);
         $tags = array_map(function ($value) {
             return $value['name'];
         }, $tags);
