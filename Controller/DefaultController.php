@@ -24,7 +24,7 @@ class DefaultController extends Controller
 
     public function searchAction($query)
     {
-        $tags = $this->get('evilpope_tag.tag_manager')->findTags($query);
+        $tags = $this->get('evilpope_tagging.tag_manager')->findTags($query);
         $tags = array_map(function ($value) {
             return $value['name'];
         }, $tags);

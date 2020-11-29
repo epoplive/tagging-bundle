@@ -1,5 +1,5 @@
 # evilpope Tag Configuration
-evilpope_tag:
+evilpope_tagging:
     model:
-        tag_class:     evilpope\TaggingBundle\Entity\Tag
-        tagging_class: evilpope\TaggingBundle\Entity\Tagging
+        tag_class:     Evilpope\TaggingBundle\Entity\Tag
+        tagging_class: Evilpope\TaggingBundle\Entity\Tagging

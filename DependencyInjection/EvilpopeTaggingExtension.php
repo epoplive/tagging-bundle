@@ -35,9 +35,9 @@ class EvilpopeTaggingExtension extends Extension
         $loader->load('orm.xml');
         $loader->load('util.xml');
 
-        $container->setParameter('evilpope_tag.entity.tag.class', $config['model']['tag_class']);
-        $container->setParameter('evilpope_tag.entity.tagging.class', $config['model']['tagging_class']);
+        $container->setParameter('evilpope_tagging.entity.tag.class', $config['model']['tag_class']);
+        $container->setParameter('evilpope_tagging.entity.tagging.class', $config['model']['tagging_class']);
 
-        $container->setAlias('evilpope_tag.slugifier', $config['service']['slugifier']);
+        $container->setAlias('evilpope_tagging.slugifier', $config['service']['slugifier']);
     }
 }

@@ -17,12 +17,12 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('evilpope_tag');
+        $treeBuilder = new TreeBuilder('evilpope_tagging');
         if (\method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
             // BC layer for symfony/config 4.1 and older
-            $rootNode = $treeBuilder->root('evilpope_tag');
+            $rootNode = $treeBuilder->root('evilpope_tagging');
         }
 
         // Here you should define the parameters that are allowed to
@@ -42,7 +42,7 @@ class Configuration implements ConfigurationInterface
             ->arrayNode('service')
             ->addDefaultsIfNotSet()
             ->children()
-            ->scalarNode('slugifier')->defaultValue('evilpope_tag.slugifier.default')->cannotBeEmpty()->end()
+            ->scalarNode('slugifier')->defaultValue('evilpope_tagging.slugifier.default')->cannotBeEmpty()->end()
             ->end()
             ->end()
             ->end();
