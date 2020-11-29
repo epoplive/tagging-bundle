@@ -4,7 +4,7 @@ parameters:
 services:
     evilpope_tagging.form.tags:
         class: Evilpope\TaggingBundle\Form\TagsType
-        arguments: [ "@evilpope_tagging.tag_manager" ]
+        arguments: [ "@fpn.tag_manager" ]
         tags:
             - { name: form.type, alias: tags }
             
