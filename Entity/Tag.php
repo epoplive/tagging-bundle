@@ -26,7 +26,22 @@ class Tag extends BaseTag
      **/
     protected $tagging;
 
+    /**
+     * @ORM\Column(name="name", type="string")
+     */
+    protected $name;
+    /**
+     * @ORM\Column(name="slug", type="string")
+     */
     protected $slug;
+    /**
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    protected $createdAt;
+    /**
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    protected $updatedAt;
 
     public function __toString()
     {

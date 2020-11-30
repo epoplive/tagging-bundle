@@ -19,10 +19,11 @@ class TaggableSubscriber implements EventSubscriber
     protected $container;
     protected $tagManagerService;
 
-    public function __construct(Container $container, $tagManagerService)
+    public function __construct(Container $container,  \Evilpope\TaggingBundle\Service\TagManager $tagManager)
     {
         $this->container = $container;
-        $this->tagManagerService = $tagManagerService;
+//        $this->tagManagerService = $tagManagerService;
+        $this->tagManager = $tagManager;
     }
 
     /**

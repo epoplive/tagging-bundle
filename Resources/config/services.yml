@@ -18,9 +18,9 @@ services:
         tags:
             - { name: form.type, alias: tags }
 
-    evilpope_tagging.taggable.subscriber:
+    Evilpope\TaggingBundle\EventListener\TaggableSubscriber:
         class: Evilpope\TaggingBundle\EventListener\TaggableSubscriber
-        arguments: [ '@service_container', 'evilpope_tagging.tag_manager' ]
+        arguments: [ '@service_container',  '@Evilpope\TaggingBundle\Service\TagManager' ]
         tags:
             - { name: doctrine.event_subscriber, connection: default }
     Evilpope\TaggingBundle\Controller\:
@@ -33,4 +33,7 @@ services:
         arguments: [ '@doctrine.orm.entity_manager', '%evilpope_tagging.entity.tag.class%', '%evilpope_tagging.entity.tagging.class%', '@evilpope_tagging.slugifier' ]
     evilpope_tagging.slugifier.default:
         class: Evilpope\TaggingBundle\Util\Slugifier
+        public: true
+    evilpope_tagging.tag_manager:
+        alias: Evilpope\TaggingBundle\Service\TagManager
         public: true

@@ -14,13 +14,13 @@ use Doctrine\ORM\Mapping\UniqueConstraint;
  */
 class Tagging extends BaseTagging
 {
-	/**
-	 * @var integer $id
-	 *
-	 * @ORM\Column(name="id", type="integer")
-	 * @ORM\Id
-	 * @ORM\GeneratedValue(strategy="AUTO")
-	 */
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
     protected $id;
 
     /**
@@ -28,5 +28,27 @@ class Tagging extends BaseTagging
      * @ORM\JoinColumn(name="tag_id", referencedColumnName="id")
      **/
     protected $tag;
+
+    /**
+     * @var string $resourceType
+     *
+     * @ORM\Column(name="resource_type", type="string")
+     */
+    protected $resourceType;
+    /**
+     * @var id $resourceId
+     *
+     * @ORM\Column(name="resource_id", type="integer")
+     */
+    protected $resourceId;
+
+    /**
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    protected $createdAt;
+    /**
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    protected $updatedAt;
 }
 
