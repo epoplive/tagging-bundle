@@ -3,6 +3,12 @@ tagging-bundle
 Since I've had to modify both the FPN\TagBundle and the Fogs\TaggingBundle
  to work with symfony 5, I'm going to just combine them into my own complete 
  bundle for easier updating and tracking.
+ 
+ installation should be as follows:
+ composer require "max-favilli/tagmanager":"dev-master as v3.0.1" "evilpope/tagging-bundle"
+ 
+ if not using symfony flex, add this line to your bundles.php:
+ Evilpope\TaggingBundle\EvilpopeTaggingBundle::class => ['all' => true],
 
 
 tagging-bundle

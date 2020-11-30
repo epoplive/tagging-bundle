@@ -1,6 +1,6 @@
 {
     "name": "evilpope/tagging-bundle",
-    "description": "Tag any entity in your Symfony 3/4/5 project.",
+    "description": "Tag any entity in your Symfony 5 project.",
     "homepage": "http://github.com/epoplive/tagging-bundle",
     "license": "MIT",
     "type": "library",
