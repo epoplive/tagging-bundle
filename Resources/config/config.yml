@@ -1,5 +1,0 @@
-# FPN Tag Configuration
-fpn_tag:
-    model:
-        tag_class:     Fogs\TaggingBundle\Entity\Tag
-        tagging_class: Fogs\TaggingBundle\Entity\Tagging

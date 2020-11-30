@@ -1,15 +1,36 @@
 parameters:
-    fpn_tag.tag_manager.class: Fogs\TaggingBundle\Service\TagManager
-
+    evilpope_tagging:
+        model:
+            tag_class: Evilpope\TaggingBundle\Entity\Tag
+            tagging_class: Evilpope\TaggingBundle\Entity\Tagging
+        entity:
+            tag.class: Evilpope\TaggingBundle\Entity\Tag
+            tagging.class: Evilpope\TaggingBundle\Entity\Tagging
+        tag_manager.class: Evilpope\TaggingBundle\Service\TagManager
+        slugifier.class: Evilpope\TaggingBundle\Util\Slugifier
 services:
-    fogs_tag.form.tags:
-        class: Fogs\TaggingBundle\Form\TagsType
-        arguments: [ "@fpn_tag.tag_manager" ]
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    evilpope_tagging.form.tags:
+        class: Evilpope\TaggingBundle\Form\TagsType
+        arguments: [ '@Evilpope\TaggingBundle\Service\TagManager' ]
         tags:
             - { name: form.type, alias: tags }
-            
-    fogs_tag.taggable.subscriber:
-        class: Fogs\TaggingBundle\EventListener\TaggableSubscriber
-        arguments: [ '@service_container', 'fpn_tag.tag_manager' ]
+
+    evilpope_tagging.taggable.subscriber:
+        class: Evilpope\TaggingBundle\EventListener\TaggableSubscriber
+        arguments: [ '@service_container', 'evilpope_tagging.tag_manager' ]
         tags:
             - { name: doctrine.event_subscriber, connection: default }
+    Evilpope\TaggingBundle\Controller\:
+        resource: '../../Controller/'
+        calls:
+            - setContainer: ['@service_container']
+        tags: [ 'controller.service_arguments', 'container.service_subscriber' ]
+    Evilpope\TaggingBundle\Service\TagManager:
+        class: Evilpope\TaggingBundle\Service\TagManager
+        arguments: [ '@doctrine.orm.entity_manager', '%evilpope_tagging.entity.tag.class%', '%evilpope_tagging.entity.tagging.class%', '@evilpope_tagging.slugifier' ]
+    evilpope_tagging.slugifier.default:
+        class: Evilpope\TaggingBundle\Util\Slugifier
+        public: true

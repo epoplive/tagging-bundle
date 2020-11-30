@@ -1,8 +1,8 @@
 <?php
 
-namespace Fogs\TaggingBundle\Entity;
+namespace Evilpope\TaggingBundle\Entity;
 
-use \FPN\TagBundle\Entity\Tagging as BaseTagging;
+use DoctrineExtensions\Taggable\Entity\Tagging as BaseTagging;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\UniqueConstraint;
 
@@ -24,8 +24,9 @@ class Tagging extends BaseTagging
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Fogs\TaggingBundle\Entity\Tag", inversedBy="tagging"))
+     * @ORM\ManyToOne(targetEntity="Evilpope\TaggingBundle\Entity\Tag", inversedBy="tagging"))
      * @ORM\JoinColumn(name="tag_id", referencedColumnName="id")
      **/
     protected $tag;
 }
+

@@ -1,10 +1,10 @@
 <?php
 
-namespace Fogs\TaggingBundle\Form;
+namespace Evilpope\TaggingBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use DoctrineExtensions\Taggable\TagManager;
+//use DoctrineExtensions\Taggable\TagManager;
 
 class TagsType extends AbstractType
 {
@@ -13,7 +13,7 @@ class TagsType extends AbstractType
      */
     protected $tagManager;
 
-    public function __construct(TagManager $tagManager)
+    public function __construct(\Evilpope\TaggingBundle\Service\TagManager $tagManager)
     {
         $this->tagManager = $tagManager;
     }

@@ -1,14 +1,14 @@
 <?php
 
-namespace Fogs\TaggingBundle\EventListener;
+namespace Evilpope\TaggingBundle\EventListener;
 
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 // for doctrine 2.4: Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-use Fogs\TaggingBundle\Interfaces\Taggable;
-use Fogs\TaggingBundle\Service\TagManager;
+use Evilpope\TaggingBundle\Interfaces\Taggable;
+use Evilpope\TaggingBundle\Service\TagManager;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 
 class TaggableSubscriber implements EventSubscriber

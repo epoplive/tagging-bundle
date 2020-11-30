@@ -1,10 +1,10 @@
 (function( $ ) {
  
-    $.fn.fogsTagsManager = function( options ) {
+    $.fn.evilpopeTagsManager = function( options ) {
 
         // Initialises tags manager
         // Uses taggingOptions[this.id] set in widgets.html.twig
-        // Usage - $("input.tagsmanager").fogsTagsManager();
+        // Usage - $("input.tagsmanager").evilpopeTagsManager();
         
         var tagsManagers = {};
             
@@ -13,7 +13,7 @@
         return this.each(function() {
             
             //use extra extend attribute of true to go deep
-            opts = $.extend( true, {}, $.fn.fogsTagsManager.defaults, taggingOptions[this.id] );
+            opts = $.extend( true, {}, $.fn.evilpopeTagsManager.defaults, taggingOptions[this.id] );
             
             // initialize the tagsManager
             tagsManagers[this.id] = $(this).tagsManager( opts.tagsManager );
@@ -40,7 +40,7 @@
     };
     
     // Plugin defaults – added as a property on our plugin function.
-    $.fn.fogsTagsManager.defaults = {
+    $.fn.evilpopeTagsManager.defaults = {
         bloodhound : {
             name: 'tags',
             displayKey: 'name'
@@ -51,6 +51,6 @@
         }
     };
 
-    $("input.tagsmanager").fogsTagsManager();
+    $("input.tagsmanager").evilpopeTagsManager();
  
 }( jQuery ));
