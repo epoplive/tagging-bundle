@@ -14,7 +14,7 @@ services:
         autoconfigure: true
     evilpope_tagging.form.tags:
         class: Evilpope\TaggingBundle\Form\TagsType
-        arguments: [ Evilpope\TaggingBundle\Service\TagManager ]
+        arguments: [ '@Evilpope\TaggingBundle\Service\TagManager' ]
         tags:
             - { name: form.type, alias: tags }
 

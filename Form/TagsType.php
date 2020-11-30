@@ -13,7 +13,7 @@ class TagsType extends AbstractType
      */
     protected $tagManager;
 
-    public function __construct(Evilpope\TaggingBundle\Service\TagManager $tagManager)
+    public function __construct(\Evilpope\TaggingBundle\Service\TagManager $tagManager)
     {
         $this->tagManager = $tagManager;
     }
