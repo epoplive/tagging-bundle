@@ -1,0 +1,10 @@
+# evilpope Tag Configuration
+evilpope_tagging:
+    model:
+        tag_class: Evilpope\TaggingBundle\Entity\Tag
+        tagging_class: Evilpope\TaggingBundle\Entity\Tagging
+    entity:
+        tag.class: Evilpope\TaggingBundle\Entity\Tag
+        tagging.class: Evilpope\TaggingBundle\Entity\Tagging
+    tag_manager.class: Evilpope\TaggingBundle\Service\TagManager
+    slugifier.class: Evilpope\TaggingBundle\Util\Slugifier

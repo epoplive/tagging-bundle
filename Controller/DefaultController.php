@@ -2,7 +2,7 @@
 
 namespace Evilpope\TaggingBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * @Route("/tags")
  */
-class DefaultController extends Controller
+class DefaultController extends AbstractController
 {
 
     /**
@@ -22,12 +22,13 @@ class DefaultController extends Controller
      * @Method("GET")
      */
 
-    public function searchAction($query)
+    public function searchAction($query, \Evilpope\TaggingBundle\Service\TagManager $tagManager)
     {
-        $tags = $this->get('evilpope_tagging.tag_manager')->findTags($query);
+        $tags = $tagManager->findTags($query);
         $tags = array_map(function ($value) {
             return $value['name'];
         }, $tags);
         return new JsonResponse($tags);
     }
+
 }

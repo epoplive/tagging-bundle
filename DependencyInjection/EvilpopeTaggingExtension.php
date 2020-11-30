@@ -25,19 +25,19 @@ class EvilpopeTaggingExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-
         // adding this to the config of this bundle did not work..
         $container->setParameter('twig.form.resources', array_merge(
-                $container->getParameter('twig.form.resources'),
-                array('@EvilpopeTagging/Form/widgets.html.twig')
+            $container->getParameter('twig.form.resources'),
+            array('@EvilpopeTagging/Form/widgets.html.twig')
         ));
 
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('orm.xml');
-        $loader->load('util.xml');
+//        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+//        $loader->load('orm.xml');
+//        $loader->load('util.xml');
 
         $container->setParameter('evilpope_tagging.entity.tag.class', $config['model']['tag_class']);
         $container->setParameter('evilpope_tagging.entity.tagging.class', $config['model']['tagging_class']);
+
 
         $container->setAlias('evilpope_tagging.slugifier', $config['service']['slugifier']);
     }
