@@ -6,7 +6,7 @@
     "type": "library",
     "autoload": {
         "psr-0": {
-            "Evilpope\\TaggingBundle": "tagging-bundle/"
+            "Evilpope\\TaggingBundle": ""
         }
     },
     "require": {
