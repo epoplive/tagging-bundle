@@ -7,8 +7,14 @@ Since I've had to modify both the FPN\TagBundle and the Fogs\TaggingBundle
  installation should be as follows:
  composer require "max-favilli/tagmanager":"dev-master as v3.0.1" "evilpope/tagging-bundle"
  
- if not using symfony flex, add this line to your bundles.php:
+ add this line to your bundles.php:
  Evilpope\TaggingBundle\EvilpopeTaggingBundle::class => ['all' => true],
+ 
+ will probably need this in config somewhere:
+ evilpope_tagging:
+     model:
+         tag_class:     App\Entity\Tag
+         tagging_class: App\Entity\Tagging
 
 
 tagging-bundle
